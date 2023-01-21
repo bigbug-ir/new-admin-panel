@@ -1,0 +1,161 @@
+/* reser style */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.4rem;
+
+}
+/* root */
+:root{
+    --light-color:white;
+}
+/* local */
+a{
+    color: black;
+    text-decoration: none;
+}
+/* body */
+body{
+    display: grid;
+    grid-template-areas:'header'
+                        'main'
+                        'footer';
+    grid-template-rows: 1fr;   
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* header */
+#header{
+    position: fixed;
+    top: auto;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding:1rem;
+}
+#header .brand{
+    color: aliceblue;
+}
+#header .brand-mark{
+    color: goldenrod;
+}
+#header .navbar{
+    display: flex;
+    flex-wrap: row nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+#header .navbar .list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: baseline;
+    list-style: none;
+}
+#header .navbar .list .list-item {
+    padding: 0.5rem;
+}
+#header .navbar .list .list-item .list-item-link{
+    color: var(--light-color);
+}
+#header .navbar .list .list-item .list-item-link:hover{
+    color: goldenrod;
+}
+#main .container {
+    background:url(../assets/img/11015642.jpg)  no-repeat  center center/cover #333;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: center;
+    align-items: center;
+}
+#main .login {
+    position: absolute;
+    /* top: 50%; */
+    width: 50%;
+    text-align: center;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.452);
+    /* height: 25%; */
+    padding: 1rem;
+    border-radius: 10px;
+}
+#main .login .form-field {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    border:2px solid aliceblue;
+    height: 100%;
+    border-radius: 10px;
+}
+#main .login .form-field .form-label {
+    color: goldenrod;
+}
+#main .login .form-field .input-group{
+    margin: 0.3rem;
+    /* width: 50%; */
+}
+#main .login .form-field .form-control{
+    border: 2px solid;
+    border-radius: 5px;
+    width: 100%;
+    padding: 0rem 1rem;
+    text-align: center;
+}
+#main .login .form-field .form-control:focus{
+    border-color: transparent
+}
+#main .login .form-field .form-control:valid{
+    background-color: yellow;
+    border-color: greenyellow;
+}
+#main .login .form-field .form-control:invalid{
+    border-color: #8b0000;
+    color: red;
+}
+#main .login .form-field .form-control:invalid + span::after {
+    position: absolute;
+    content: "✖";
+    padding-left: 5px;
+    color: #8b0000;
+}
+#main .login .form-field .form-control:valid + span::after {
+    position: absolute;
+    content: "✓";
+    padding-left: 5px;
+    color: #009000;
+}
+#main .login .form-field .select-gender{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+
+}
+#main .login .form-field .btn{
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 5px;
+    background-color: #009000;
+}
+/* footer */
+#footer{
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+}
+#footer .copyr{
+    color: aliceblue;
+}
+#footer .copyr-mark{
+    color: goldenrod;
+}
